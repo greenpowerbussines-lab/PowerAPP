@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Lead {
+  id         String   @id @default(cuid())
+  name       String?
+  company    String?
+  phone      String
+  telegram   String?
+  segment    String?
+  power      Int?
+  flowPerDay Int?
+  network    String?
+  status     String   @default("new")
+  notes      String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model CaseStudy {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  titleUz     String
+  titleRu     String
+  descUz      String?
+  descRu      String?
+  bodyUz      String?
+  bodyRu      String?
+  imageUrl    String?
+  segment     String?
+  powerKw     Int?
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model FAQ {
+  id          String   @id @default(cuid())
+  questionUz  String
+  questionRu  String
+  answerUz    String
+  answerRu    String
+  order       Int      @default(0)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model SiteSettings {
+  key             String   @id @default("main")
+  phone           String?
+  telegram        String?
+  addressUz       String?
+  addressRu       String?
+  workingHoursUz  String?
+  workingHoursRu  String?
+  seoTitleUz      String?
+  seoTitleRu      String?
+  heroTitleUz     String?
+  heroTitleRu     String?
+  updatedAt       DateTime @updatedAt
+}

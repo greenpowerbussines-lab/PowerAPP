@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-white text-neutral-900;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-tight font-bold;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-neutral-900;
+  }
+}
+
+@layer components {
+
+  /* === Layout === */
+  .section-container {
+    @apply mx-auto max-w-6xl px-5 sm:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 sm:py-28 lg:py-32;
+  }
+
+  .section-cinematic {
+    @apply py-28 sm:py-36 lg:py-44;
+  }
+
+  /* === Dark / Light sections === */
+  .section-dark {
+    @apply bg-neutral-950 text-white;
+  }
+
+  .section-dark h1,
+  .section-dark h2,
+  .section-dark h3 {
+    @apply text-white;
+  }
+
+  .section-dark p {
+    @apply text-neutral-400;
+  }
+
+  /* === Buttons === */
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300;
+    @apply hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+    overflow: hidden;
+  }
+
+  .btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn-primary:hover::after {
+    left: 100%;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-neutral-300 px-7 py-3.5 text-sm font-semibold text-neutral-700 transition-all duration-300;
+    @apply hover:border-neutral-900 hover:text-neutral-900 hover:-translate-y-0.5;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold text-white/90 transition-all duration-300;
+    @apply hover:bg-white/10 hover:text-white;
+  }
+
+  /* === Cards === */
+  .card {
+    @apply rounded-3xl border border-neutral-200/80 bg-white p-7 transition-all duration-500;
+    @apply hover:shadow-xl hover:shadow-neutral-900/5 hover:-translate-y-1;
+  }
+
+  .card-glass {
+    @apply rounded-3xl p-7 transition-all duration-500;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  }
+
+  .card-dark {
+    @apply rounded-3xl border border-white/10 bg-white/5 p-7 transition-all duration-500;
+    @apply hover:bg-white/10 hover:border-white/20;
+  }
+
+  /* === Inputs === */
+  .input-field {
+    @apply w-full rounded-2xl border border-neutral-200 bg-neutral-50/50 px-5 py-3.5 text-sm text-neutral-900;
+    @apply placeholder:text-neutral-400 transition-all duration-300;
+    @apply focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/10;
+    @apply hover:border-neutral-300;
+  }
+
+  /* === Badges === */
+  .badge {
+    @apply inline-flex items-center rounded-full bg-primary/10 px-3.5 py-1.5 text-xs font-medium text-primary-700;
+  }
+
+  .badge-neutral {
+    @apply inline-flex items-center rounded-full bg-neutral-100 px-3.5 py-1.5 text-xs font-medium text-neutral-600;
+  }
+
+  /* === Typography === */
+  .text-display {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+  }
+
+  .text-headline {
+    font-size: clamp(1.75rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+  }
+
+  .text-subhead {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.6;
+  }
+}
+
+/* === Gradient Mesh === */
+@keyframes gradient-shift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.gradient-mesh {
+  background: radial-gradient(ellipse at 20% 50%, rgba(13, 148, 136, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(13, 148, 136, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, rgba(13, 148, 136, 0.05) 0%, transparent 50%);
+}
+
+/* === Premium V2 Utilities === */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #a3a3a3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, #2dd4bf 0%, #0f766e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.02);
+}
+
+.transition-slow {
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* === Scroll indicator === */
+@keyframes bounce-soft {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-bounce-soft {
+  animation: bounce-soft 2s ease-in-out infinite;
+}
+
+/* === Focus visible === */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #0d9488;
+  outline-offset: 2px;
+}

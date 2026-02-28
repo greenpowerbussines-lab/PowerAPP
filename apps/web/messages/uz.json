@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "solutions": "Yechimlar",
+    "products": "Mahsulotlar",
+    "cases": "Keyslar",
+    "faq": "Savol-javob",
+    "contacts": "Kontaktlar",
+    "getQuote": "Bepul hisob-kitob",
+    "telegram": "Telegram"
+  },
+  "hero": {
+    "title": "Biznes uchun tezkor DC zaryad stansiyalari",
+    "subtitle": "80–240 kW DC stansiyalar: avtoturargohlar, savdo markazlari, ofislar, avtoparklar va qurilish loyihalari uchun",
+    "ctaQuote": "Bepul hisob-kitob",
+    "ctaTelegram": "Telegramga yozish",
+    "trustWarranty": "Kafolat",
+    "trustTurnkey": "Kalit topshiriq",
+    "trustCertified": "Sertifikatlangan",
+    "trustService": "Servis xizmati"
+  },
+  "products": {
+    "title": "Mahsulotlar",
+    "subtitle": "Har qanday biznes ehtiyojlari uchun DC tezkor zaryad stansiyalari",
+    "power": "kW quvvat",
+    "connector": "Ulagich",
+    "cta": "Batafsil"
+  },
+  "solutions": {
+    "title": "Yechimlar",
+    "subtitle": "Har bir biznes segmenti uchun moslashtirilgan yechimlar",
+    "parking": "Avtoturargohlar",
+    "parkingDesc": "Ko'p qavatli va ochiq avtoturargohlar uchun DC zaryad infratuzilmasi",
+    "mall": "Savdo markazlari",
+    "mallDesc": "Xaridorlar uchun qulay zaryad stansiyalari bilan mijozlar oqimini oshiring",
+    "fleet": "Avtoparklar",
+    "fleetDesc": "Korporativ avtopark uchun tezkor zaryad yechimlari va boshqaruv tizimi",
+    "developer": "Qurilish loyihalari",
+    "developerDesc": "Yangi binolar va turar-joy majmualarida zaryad infratuzilmasini rejalashtirish"
+  },
+  "howItWorks": {
+    "title": "Qanday ishlaydi",
+    "step1title": "So'rov yuborish",
+    "step1desc": "Formani to'ldiring yoki Telegramga yozing",
+    "step2title": "Texnik tahlil",
+    "step2desc": "Muhandislarimiz ob'ektni o'rganadilar",
+    "step3title": "Loyiha tayyorlash",
+    "step3desc": "Individual yechim va smeta tayyorlanadi",
+    "step4title": "O'rnatish",
+    "step4desc": "Professional o'rnatish va sozlash",
+    "step5title": "Xizmat ko'rsatish",
+    "step5desc": "Texnik xizmat va monitoring"
+  },
+  "cases": {
+    "title": "Keyslar",
+    "subtitle": "Bizning muvaffaqiyatli loyihalarimiz",
+    "readMore": "Batafsil o'qish",
+    "noCases": "Hozircha keyslar yo'q"
+  },
+  "faqPage": {
+    "title": "Savol-javob",
+    "subtitle": "Ko'p beriladigan savollar va javoblar"
+  },
+  "contactsPage": {
+    "title": "Kontaktlar",
+    "subtitle": "Biz bilan bog'laning",
+    "callUs": "Qo'ng'iroq qilish",
+    "writeUs": "Telegramga yozish",
+    "visitUs": "Manzilga kelish",
+    "workingHours": "Ish vaqti"
+  },
+  "leadForm": {
+    "title": "Bepul hisob-kitob oling",
+    "object": "Ob'ekt (masalan: TCh, ofis)",
+    "flowPerDay": "Kuniga avtomobillar oqimi",
+    "power": "Quvvat (kW)",
+    "network": "Tarmoq (elektr)",
+    "phone": "Telefon (majburiy)",
+    "telegram": "Telegram (ixtiyoriy)",
+    "company": "Kompaniya (ixtiyoriy)",
+    "name": "Ism",
+    "submit": "Yuborish",
+    "success": "So'rov yuborildi. Tez orada siz bilan bog'lanamiz.",
+    "error": "Xatolik. Iltimos, qayta urinib ko'ring."
+  },
+  "contacts": {
+    "title": "Kontaktlar",
+    "call": "Qo'ng'iroq qilish",
+    "telegram": "Telegram",
+    "address": "Manzil",
+    "hours": "Ish vaqti"
+  },
+  "cta": {
+    "call": "Qo'ng'iroq",
+    "telegram": "Telegram",
+    "getQuote": "Hisob-kitob"
+  },
+  "footer": {
+    "privacy": "Maxfiylik",
+    "terms": "Foydalanish shartlari"
+  }
+}
